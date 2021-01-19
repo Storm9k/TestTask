@@ -1,0 +1,23 @@
+﻿@model ThirdTask
+
+@{
+
+    ViewData["Title"] = "ThirdTaskResult";
+}
+
+<h1>ThirdTaskResult</h1>
+
+<div>
+    Строка @Model.UserInput
+
+    @if (Model.Result())
+    {
+        @Html.Label("является палиндромом")
+    }
+    else
+    {
+        @Html.Label("не является палиндромом")
+    }
+
+
+</div>

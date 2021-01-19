@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "FirstTask";
+
+}
+
+<h1>FirstTask</h1>
+
+<div>
+    <h4>Массив содержит числа:</h4>
+    
+        @foreach (int i in ViewBag.Array)
+        {
+            <p>@i;</p>
+        }
+
+    <h4>Сумма сложения каждого второго нечетного числа из массива чисел:</h4>
+        @ViewBag.Sum
+
+</div>

@@ -1,0 +1,20 @@
+﻿
+@{
+
+    ViewData["Title"] = "ThirdTask";
+}
+
+<h1>ThirdTask</h1>
+
+@using (Html.BeginForm("ThirdTask", "Task", FormMethod.Post))
+{
+    <p>
+        @Html.Label("InputLabel", "Введите строку на проверку:")
+        @Html.TextBox("UserInput")
+    </p>
+
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+
+}
