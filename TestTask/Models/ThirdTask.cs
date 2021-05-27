@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace TestTask.Models
 {
     public class ThirdTask : ITask <bool>, IDisposable
     {
-        public string UserInput;
+        public readonly string UserInput;
 
         public ThirdTask (string ui)
         {
@@ -16,16 +13,16 @@ namespace TestTask.Models
 
         public bool Result ()
         {
-            string tmpUI;
-            int middleindex = UserInput.Length / 2;
-            if (UserInput.Length % 2 != 0)
-                middleindex += 1;
-            char[] strReverse = new char [UserInput.Length / 2];
-            UserInput.CopyTo(middleindex, strReverse, 0, UserInput.Length / 2);
-            Array.Reverse(strReverse);
-            tmpUI = new string(strReverse);
+                string tmpUI;
+                int middleindex = UserInput.Length / 2;
+                if (UserInput.Length % 2 != 0)
+                    middleindex += 1;
+                char[] strReverse = new char[UserInput.Length / 2];
+                UserInput.CopyTo(middleindex, strReverse, 0, UserInput.Length / 2);
+                Array.Reverse(strReverse);
+                tmpUI = new string(strReverse);
 
-            return String.Equals(UserInput.Substring(0, UserInput.Length / 2), tmpUI);
+                return String.Equals(UserInput.Substring(0, UserInput.Length / 2), tmpUI);
         }
 
         public void Dispose()

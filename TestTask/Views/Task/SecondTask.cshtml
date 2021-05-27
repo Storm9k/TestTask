@@ -1,7 +1,38 @@
-﻿
+﻿@model SecondTaskModel
 @{
-    ViewData["Title"] = "SecondTask";
+    ViewData["Title"] = "Второе задание";
 }
 
-<h1>SecondTask</h1>
+<h4>@ViewData["Title"]</h4>
+<div>
+    <h5>Первое число в связном списке в обратном порядке:</h5>
+    <p>
+        @foreach (int item in Model.FirstLL)
+        {
+            @item;
+        }
+    </p>
+    <h5>Второе число в связном списке в обратном порядке:</h5>
+    <p>
+        @foreach (int item in Model.SecondLL)
+        {
+            @item
+        }
+    </p>
+    <h5>Полученный результат в обратном порядке:</h5>
+    <p>
+        @foreach (int item in @Model.Result())
+        {
+            @item
+        }
+    </p>
 
+    <h5>Полученный результат в обычном порядке:</h5>
+    <p>
+        @foreach (int item in @Model.Result().Reverse())
+        {
+            @item
+        }
+    </p>
+
+</div>

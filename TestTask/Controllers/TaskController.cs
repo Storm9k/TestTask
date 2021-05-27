@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TestTask.Models;
@@ -25,18 +21,19 @@ namespace TestTask
 
         public IActionResult FirstTask()
         {
-            using (FirstTaskModel Task = new FirstTaskModel())
+            using (FirstTaskModel ft = new FirstTaskModel())
             {
-                
-                ViewBag.Array = Task.array;
-                ViewBag.Sum = Task.Result();
+                return View(ft);
             }
-                return View();
         }
 
         public IActionResult SecondTask()
         {
-            return View();
+            using (SecondTaskModel st = new SecondTaskModel())
+            {
+
+                return View(st);
+            }
         }
 
         [HttpGet]
@@ -50,14 +47,9 @@ namespace TestTask
         {
             using (ThirdTask Task = new ThirdTask(UserInput))
             {
-                return View("ThirdTaskResult", Task);
+                if (!String.IsNullOrEmpty(UserInput)) return View("ThirdTaskResult", Task);
+                else return BadRequest("Не введена строка");
             }
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

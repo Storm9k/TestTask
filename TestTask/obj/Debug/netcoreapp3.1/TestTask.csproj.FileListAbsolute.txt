@@ -1,6 +1,5 @@
 C:\Users\Vlad\source\repos\TestTask\TestTask\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Vlad\source\repos\TestTask\TestTask\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\Vlad\source\repos\TestTask\TestTask\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Vlad\source\repos\TestTask\TestTask\bin\Debug\netcoreapp3.1\TestTask.exe
 C:\Users\Vlad\source\repos\TestTask\TestTask\bin\Debug\netcoreapp3.1\TestTask.deps.json
 C:\Users\Vlad\source\repos\TestTask\TestTask\bin\Debug\netcoreapp3.1\TestTask.runtimeconfig.json
@@ -16,7 +15,6 @@ C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\TestTask.Ra
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\TestTask.TagHelpers.input.cache
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\TestTask.TagHelpers.output.cache
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\TestTask.RazorCoreGenerate.cache
-C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -111,3 +109,4 @@ C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views\Task\ThirdTask.cshtml.g.cs
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views\Task\ThirdTaskResult.cshtml.g.cs
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\TestTask.csprojAssemblyReference.cache
+C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\scopedcss\bundle\TestTask.styles.css

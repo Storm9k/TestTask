@@ -1,20 +1,20 @@
-﻿
+﻿@model FirstTaskModel
 @{
-    ViewData["Title"] = "FirstTask";
+    ViewData["Title"] = "Первое задание";
 
 }
 
-<h1>FirstTask</h1>
+<h4>@ViewData["Title"]</h4>
 
 <div>
-    <h4>Массив содержит числа:</h4>
+    <h5>Массив содержит числа:</h5>
     
-        @foreach (int i in ViewBag.Array)
+        @foreach (int i in Model.array)
         {
             <p>@i;</p>
         }
 
-    <h4>Сумма сложения каждого второго нечетного числа из массива чисел:</h4>
-        @ViewBag.Sum
+    <h5>Сумма сложения каждого второго нечетного числа из массива чисел:</h5>
+        @Model.Result()
 
 </div>

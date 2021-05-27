@@ -1,10 +1,10 @@
 ﻿
 @{
 
-    ViewData["Title"] = "ThirdTask";
+    ViewData["Title"] = "Третье задание";
 }
 
-<h1>ThirdTask</h1>
+<h4>@ViewData["Title"]</h4>
 
 @using (Html.BeginForm("ThirdTask", "Task", FormMethod.Post))
 {
@@ -12,7 +12,6 @@
         @Html.Label("InputLabel", "Введите строку на проверку:")
         @Html.TextBox("UserInput")
     </p>
-
     <p>
         <input type="submit" value="Отправить" />
     </p>

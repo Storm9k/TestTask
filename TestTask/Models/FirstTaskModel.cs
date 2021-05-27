@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace TestTask
 {
@@ -10,31 +8,27 @@ namespace TestTask
 
         public FirstTaskModel()
         {
+            Random rand = new Random();
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = rand.Next(100);
+                array[i] = rand.Next(-100, 100);
                 if (!(array[i] % 2 == 0))
-                    temp.Add(array[i]);
+                    OddNumbers.Add(array[i]);
             }
         }
 
-        int sum = 0;
-        Random rand = new Random();
         public int[] array = new int[10];
-        public List<int> temp = new List<int>();
-
-
+        List<int> OddNumbers = new List<int>();
         public int Result()
         {
-            for (int i = 1; i < temp.Count; i += 2)
-                sum += temp[i];
+            int sum = 0;
+            for (int i = 1; i < OddNumbers.Count; i += 2)
+                sum += Math.Abs(OddNumbers[i]);
             return sum;
         }
-
         public void Dispose()
         {
-            
-        }
 
+        }
     }
 }
