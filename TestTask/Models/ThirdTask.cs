@@ -5,12 +5,12 @@ namespace TestTask.Models
     public class ThirdTask : ITask <bool>, IDisposable
     {
         public readonly string UserInput;
-
         public ThirdTask (string ui)
         {
             UserInput = ui;
         }
 
+        //Реализация интерфейса ITask<T> и возврат результата данной модели
         public bool Result ()
         {
                 string tmpUI;
@@ -21,7 +21,6 @@ namespace TestTask.Models
                 UserInput.CopyTo(middleindex, strReverse, 0, UserInput.Length / 2);
                 Array.Reverse(strReverse);
                 tmpUI = new string(strReverse);
-
                 return String.Equals(UserInput.Substring(0, UserInput.Length / 2), tmpUI);
         }
 

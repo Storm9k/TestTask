@@ -9,6 +9,7 @@ namespace TestTask
         public LinkedList<int> SecondLL = new LinkedList<int>();
         private int Length = 5;
 
+        //Создаем объект и ренерируем псевдослучайные числа в два связанных списка
         public SecondTaskModel()
         {
             Random random = new Random();
@@ -17,15 +18,17 @@ namespace TestTask
                 FirstLL.AddFirst(random.Next(0, 10));
                 SecondLL.AddFirst(random.Next(0, 10));
             }
-
         }
-        
+
+        //Реализация интерфейса ITask<T> и возврат результата данной модели
         public LinkedList<int> Result()
         {
+            //Создаем промежуточный связанный список с результатами сложения, а так же объекты нод со ссылкой на первый элемент в связанном свписке
             LinkedList<int> Result = new LinkedList<int>();
             LinkedListNode<int> ResultNode = Result.AddFirst(0);
             LinkedListNode<int> firstNodes = FirstLL.First;
             LinkedListNode<int> secondNodes = SecondLL.First;
+            //Цикл для поузлового сложения и добавления результата в промежуточный связанный список
             while (firstNodes != null && secondNodes != null)
             {
                 ResultNode.Value += firstNodes.Value + secondNodes.Value;
