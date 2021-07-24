@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TestTask.Models;
 
 namespace TestTask
 {
@@ -23,6 +24,9 @@ namespace TestTask
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<ITask<int>, FirstTask>();
+            services.AddTransient<ITask<LinkedList<int>>, SecondTask>();
+            services.AddTransient<ITask<bool>, ThirdTask>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

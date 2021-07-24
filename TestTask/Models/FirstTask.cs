@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TestTask
+namespace TestTask.Models
 {
-    public class FirstTaskModel : ITask<int>, IDisposable
+    public class FirstTask : ITask<int>
     {
         //Создаем объект и ренерируем псевдослучайные числа в массив
-        public FirstTaskModel()
+        public FirstTask()
         {
             Random rand = new Random();
             //С помощью цикла for заполняем массив псевдослучаными числами и параллельно добавляяем нечетные числа в список

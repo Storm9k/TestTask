@@ -2,16 +2,24 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TestTask.Models;
+using System.Collections.Generic;
+
 
 namespace TestTask
 {
     public class TaskController : Controller
     {
-        private readonly ILogger<TaskController> _logger;
+        private readonly ILogger<TaskController> logger;
+        private ITask<int> ft;
+        private ITask<LinkedList<int>> st;
+        private ITask<bool> ts;
 
-        public TaskController(ILogger<TaskController> logger)
+        public TaskController(ILogger<TaskController> _logger, ITask<int> _ft, ITask<LinkedList<int>> _st, ITask<bool> _ts)
         {
-            _logger = logger;
+            logger = _logger;
+            ft = _ft;
+            st = _st;
+            ts = _ts;
         }
 
         public IActionResult Index()
@@ -22,7 +30,7 @@ namespace TestTask
         public IActionResult FirstTask()
         {
             //Создаем модель представленияя и передаем ее в представление 
-            using (FirstTaskModel ft = new FirstTaskModel())
+            using (ft = new FirstTask())
             {
                 return View(ft);
             }
@@ -31,7 +39,7 @@ namespace TestTask
         public IActionResult SecondTask()
         {
             //Создаем модель представленияя и передаем ее в представление 
-            using (SecondTaskModel st = new SecondTaskModel())
+            using (st = new SecondTask())
             {
 
                 return View(st);
@@ -49,9 +57,9 @@ namespace TestTask
         public IActionResult ThirdTask(string UserInput)
         {
             //Создаем модель представленияя и передаем ее через Post запрос в представление 
-            using (ThirdTask Task = new ThirdTask(UserInput))
+            using (ts = new ThirdTask(UserInput))
             {
-                if (!String.IsNullOrEmpty(UserInput)) return View("ThirdTaskResult", Task);
+                if (!String.IsNullOrEmpty(UserInput)) return View("ThirdTaskResult", ts);
                 else return BadRequest("Не введена строка");
             }
         }

@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TestTask
+namespace TestTask.Models
 {
-    public class SecondTaskModel : ITask <LinkedList<int>>, IDisposable
+    public class SecondTask : ITask <LinkedList<int>>
     {
         public LinkedList<int> FirstLL = new LinkedList<int>();
         public LinkedList<int> SecondLL = new LinkedList<int>();
         private int Length = 5;
 
         //Создаем объект и ренерируем псевдослучайные числа в два связанных списка
-        public SecondTaskModel()
+        public SecondTask()
         {
             Random random = new Random();
             for (int i = 0; i < Length; i++)

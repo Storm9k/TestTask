@@ -1,6 +1,8 @@
-﻿namespace TestTask
+﻿using System;
+
+namespace TestTask.Models
 {
-    interface ITask <T>
+    public interface ITask <T> : IDisposable
     {
         T Result();
 
