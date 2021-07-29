@@ -109,3 +109,4 @@ C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views\Task\ThirdTask.cshtml.g.cs
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\Razor\Views\Task\ThirdTaskResult.cshtml.g.cs
 C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\scopedcss\bundle\TestTask.styles.css
+C:\Users\Vlad\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.1\TestTask.csprojAssemblyReference.cache

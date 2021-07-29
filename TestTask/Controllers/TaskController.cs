@@ -29,8 +29,7 @@ namespace TestTask
 
         public IActionResult FirstTask()
         {
-            //Создаем модель представленияя и передаем ее в представление 
-            using (ft = new FirstTask())
+            using (ft)
             {
                 return View(ft);
             }
@@ -38,8 +37,7 @@ namespace TestTask
 
         public IActionResult SecondTask()
         {
-            //Создаем модель представленияя и передаем ее в представление 
-            using (st = new SecondTask())
+            using (st)
             {
 
                 return View(st);
@@ -56,10 +54,11 @@ namespace TestTask
         [HttpPost]
         public IActionResult ThirdTask(string UserInput)
         {
-            //Создаем модель представленияя и передаем ее через Post запрос в представление 
-            using (ts = new ThirdTask(UserInput))
+            using (ts)
             {
-                if (!String.IsNullOrEmpty(UserInput)) return View("ThirdTaskResult", ts);
+                (ts as ThirdTask).userinput = UserInput;
+                
+                if (!String.IsNullOrEmpty((ts as ThirdTask).userinput)) return View("ThirdTaskResult", ts);
                 else return BadRequest("Не введена строка");
             }
         }

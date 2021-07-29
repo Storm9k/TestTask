@@ -4,7 +4,14 @@ namespace TestTask.Models
 {
     public class ThirdTask : ITask <bool>
     {
-        public readonly string UserInput;
+        private string UserInput;
+
+        public string userinput
+        {
+            get { return UserInput; }
+            set { if (!String.IsNullOrEmpty(value)) UserInput = value; }
+        }
+
         public ThirdTask()
         {
 
